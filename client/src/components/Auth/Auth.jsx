@@ -8,13 +8,13 @@ import {useDispatch} from "react-redux";
 import {createUser, loginUser} from "../../features/auth/authThunk";
 import {useSnackbar} from "notistack";
 
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined"
-import useStyles from './styles'
+import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+import useStyles from './styles';
 import Input from "./Input/Input";
 import Icon from "./Icon/Icon";
 import * as api from "../../api";
 
-const initialState = {firstName: '', lastName: '', email: '', password: '', confirmPassword: ''}
+const initialState = {firstName: '', lastName: '', email: '', password: '', confirmPassword: ''};
 
 const Auth = () => {
     const { enqueueSnackbar } = useSnackbar()
@@ -95,8 +95,7 @@ const Auth = () => {
                                 color="primary"
                                 fullWidth
                                 startIcon={<Icon/>}
-                                variant="contained"
-                        >
+                                variant="contained">
                             Google Sign In
                         </Button>
                         <Grid container justifyContent="center">
