@@ -23,8 +23,8 @@
     "redux-thunk": "^2.4.1"
   },
   "scripts": {
-    "start": " --openssl-legacy-provider start",
-    "build": " --openssl-legacy-provider build",
+    "start": "npm run start --openssl-legacy-provider",
+    "build": "npm run build --openssl-legacy-provider",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
