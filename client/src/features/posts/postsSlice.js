@@ -62,7 +62,7 @@ export const postsSlice = createSlice({
             state.numberOfPages = action.payload.numberOfPages
         },
         [createPost.fulfilled]: (state, action) => {
-            state.posts = [action.payload, ...state.posts]
+            state.posts = [action.payload, state.posts]
         },
         [updatePost.fulfilled]: (state, action) => {
             state.posts = state.posts.map(post => post._id === action.payload._id ? action.payload : post)
