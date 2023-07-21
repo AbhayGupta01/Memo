@@ -36,23 +36,23 @@ export const postsSlice = createSlice({
             state.isLoading = true
         },
         [getPost.fulfilled]: (state, action) => {
-            state.post = action.payload
+            state.post = action.payload,
             state.isLoading = false
         },
         [getPosts.pending]: (state) => {
             state.isLoading = true
         },
         [getPosts.fulfilled]: (state, action) => {
-            state.posts = action.payload.posts
-            state.currentPage = action.payload.currentPage
-            state.numberOfPages = action.payload.numberOfPages
+            state.posts = action.payload.posts,
+            state.currentPage = action.payload.currentPage,
+            state.numberOfPages = action.payload.numberOfPages,
             state.isLoading = false
         },
         [getPostsBySearch.pending]: (state) => {
             state.isLoading = true
         },
         [getPostsBySearch.fulfilled]: (state, actions) => {
-            state.posts = actions.payload
+            state.posts = actions.payload,
             state.isLoading = false
         },
         [getPostsNumberOfPages.pending]: (state) => {
@@ -79,6 +79,6 @@ export const postsSlice = createSlice({
     }
 })
 
-export const {setCurrentId, setRecommendedPosts} = postsSlice.actions
+export const {setCurrentId, setRecommendedPosts} = postsSlice.actions;
 
-export default postsSlice.reducer
+export default postsSlice.reducer;
