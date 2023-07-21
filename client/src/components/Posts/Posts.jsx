@@ -10,7 +10,7 @@ const Posts = () => {
     const {posts, isLoading} = useSelector((state) => state.posts)
     const classes = useStyles()
 
-    if (!posts.size && !isLoading) {
+    if (!state.posts.length && !isLoading) {
         return (
             <Typography align="center" variant="h4" component="h2">No Posts</Typography>
         )
