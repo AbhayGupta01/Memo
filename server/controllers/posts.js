@@ -66,7 +66,7 @@ export const getCountOfPages = async (req, res) => {
 export const createPost = async (req, res) => {
     try {
         const {post} = req.body
-        const newPost = new PostMessage({...post, creator: req.userId, createdAt: new Date().toISOString()})
+        const newPost = new PostMessage({data: {...post}, creator: req.userId, createdAt: new Date().toISOString()})
 
         await newPost.save()
 
