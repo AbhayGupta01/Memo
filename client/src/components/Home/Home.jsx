@@ -83,7 +83,7 @@ const Home = () => {
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
                         <AppBar className={classes.appBarSearch} position="static" color="inherit">
-                            <TextField name="search" variant="outlined" label="Search Memories" fullWidth value={search}
+                            <TextField name="search" variant="outlined" label="Search MemoirScape" fullWidth value={search}
                                            onChange={(e) => setSearch(e.target.value)} onKeyPress={handleKeyPress}/>
                             <ChipInput style={{margin: "10px 0"}} value={tags} onAdd={handleAddTag}
                                        onDelete={handleDeleteTag} label="Search Tags" variant="outlined"/>

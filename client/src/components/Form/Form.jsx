@@ -70,7 +70,7 @@ const Form = () => {
         return (
             <Paper elevation={6}>
                 <Typography variant="h6" align="center">
-                    Please Sign In to create your own memories, leave comments, and like other`s memories
+                    Please Sign In to create your own MemoirScape, leave comments, and like other`s MemoirScape
                 </Typography>
             </Paper>
         )

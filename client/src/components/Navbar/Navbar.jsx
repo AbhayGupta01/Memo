@@ -18,8 +18,8 @@ const Navbar = () => {
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
             <Link to="/" className={classes.brandContainer}>
-                <img className={classes.image} src={memoriesText} alt="memories" height="60"/>
-                <img className={classes.image} src={memoriesLogo} alt="memories" height="60"/>
+                <img className={classes.image} src={memoriesText} alt="MemoirScape" height="60"/>
+                <img className={classes.image} src={memoriesLogo} alt="MemoirScape" height="60"/>
             </Link>
             <Toolbar className={classes.toolbar}>
                 {user ? (

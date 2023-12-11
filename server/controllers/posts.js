@@ -29,7 +29,7 @@ export const getPosts = async (req, res) => {
             return res.status(404).json({message: "Posts Not Found"})
         }
 
-        res.status(200).json({ data: posts, currentPage: Number(page), numberOfPages: Math.ceil(total / LIMIT)})
+        res.status(200).json({ posts, currentPage: Number(page), numberOfPages: Math.ceil(total / LIMIT)})
     } catch (e) {
         res.status(500).json({message: "Some error, please try again..."})
     }
