@@ -56,7 +56,7 @@ const Auth = () => {
                 const response = await api.getGoogleAccessAndIdTokens(successResponse.code)
                 const userInfoResponse = await api.getGoogleUserInfo(response.data.access_token)
                 login(response.data.id_token, userInfoResponse.data)
-                navigate(process.env.REACT_APP_BASE_URL)
+                navigate("/posts")
             } catch (e) {
                 console.log(e.message)
             }
