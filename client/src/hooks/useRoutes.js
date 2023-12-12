@@ -7,7 +7,7 @@ export const useRoutes = (isAuth) => {
     if (isAuth) {
         return (
             <Routes>
-                <Route path="/" element={<Navigate to="/posts" replace/>}/>
+                <Route path="/auth" element={<Navigate to="/posts" replace/>}/>
                 <Route path="/posts" element={<Home/>} exact/>
                 <Route path="/posts/search" element={<Home/>} exact/>
                 <Route path="/posts/:id" element={<PostDetails/>}/>

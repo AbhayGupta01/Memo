@@ -33,7 +33,7 @@ export const getGoogleAccessAndIdTokens = (code) => axios.post("https://oauth2.g
         code,
         client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
         client_secret: process.env.REACT_APP_GOOGLE_CLIENT_SECRET,
-        redirect_uri: "/",
+        redirect_uri: process.env.REACT_APP_BASE_URL,
         grant_type: "authorization_code"
     })
 export const getGoogleUserInfo = (oauth2Token) => axios.get("https://www.googleapis.com/oauth2/v1/userinfo", {
