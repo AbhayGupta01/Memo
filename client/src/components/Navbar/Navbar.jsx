@@ -5,8 +5,8 @@ import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {useAuth} from "../../hooks/useAuth";
 
-import memoriesText from "../../images/memoriesText.png";
-import memoriesLogo from "../../images/memoriesLogo.png"
+import memoriesText from "../../images/1.png";
+// import memoriesLogo from "../../images/memoriesLogo.png"
 import useStyles from "./styles"
 
 const Navbar = () => {
@@ -18,8 +18,8 @@ const Navbar = () => {
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
             <Link to="/" className={classes.brandContainer}>
-                <img className={classes.image} src={memoriesText} alt="MemoirScape" height="60"/>
-                <img className={classes.image} src={memoriesLogo} alt="MemoirScape" height="60"/>
+                <img className={classes.image} src={memoriesText} alt="MemoirScape" height="75"/>
+                {/* <img className={classes.image} src={memoriesLogo} alt="MemoirScape" height="60"/> */}
             </Link>
             <Toolbar className={classes.toolbar}>
                 {user ? (
