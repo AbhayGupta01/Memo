@@ -23,7 +23,7 @@ export const useAuth = () => {
         dispatch(setToken(null))
         dispatch(setUserInfo(null))
         dispatch(setIsAuth(false))
-        navigate(process.env.REACT_APP_BASE_URL)
+        navigate("/")
     }, [dispatch, navigate])
 
 

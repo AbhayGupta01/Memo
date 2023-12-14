@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-
+import { useNavigate } from 'react-router-dom';
 import {TextField, Button, Typography, Paper} from "@material-ui/core";
 import {useDispatch, useSelector} from "react-redux";
 import {createPost, updatePost} from "../../features/posts/postsThunk";
@@ -16,8 +16,8 @@ const initialState = {
     tags: '',
     selectedFile: ''
 }
-
 const Form = () => {
+    const navigate = useNavigate();
     const [postData, setPostData] = useState(initialState)
     const {posts, currentPage, currentId} = useSelector(state => state.posts)
     const { enqueueSnackbar } = useSnackbar()
@@ -35,7 +35,9 @@ const Form = () => {
             dispatch(updatePost({currentId: currentId, postData: {...postData, tags, name: user.name}, enqueueSnackbar}))
             clear()
         } else {
-            dispatch(createPost({newPost: {...postData, tags, name: user.name}, enqueueSnackbar}))
+            console.log({postData});
+            dispatch(createPost( { postData: {...postData, tags, name: user.name}}, enqueueSnackbar))
+            navigate("/")
             clear()
         }
     }

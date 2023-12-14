@@ -62,6 +62,7 @@ export const postsSlice = createSlice({
             state.numberOfPages = action.payload.numberOfPages
         },
         [createPost.fulfilled]: (state, action) => {
+            // console.log(action.payload);
             state.posts = [action.payload, state.posts]
         },
         [updatePost.fulfilled]: (state, action) => {

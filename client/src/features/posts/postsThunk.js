@@ -53,8 +53,9 @@ export const createPost = createAsyncThunk(
     'posts/createPosts',
     async (payload) => {
         try {
-            const response = await api.createPost(payload.newPost)
-            payload.enqueueSnackbar('The post has been successfully created', {variant: 'success'})
+            // console.log(payload);
+            const response = await api.createPost(payload.postData)
+            payload.enqueueSnackbar('The post has been successfully created', {variant: 'success'})  
             return response.data
         } catch (e) {
             console.log(e.response.data)

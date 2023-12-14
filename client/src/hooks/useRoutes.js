@@ -7,7 +7,7 @@ export const useRoutes = (isAuth) => {
     if (isAuth) {
         return (
             <Routes>
-                <Route path={process.env.REACT_APP_BASE_URL} element={<Navigate to="/posts" replace/>}/>
+                <Route path="/" element={<Navigate to="/posts" replace/>}/>
                 <Route path="/posts" element={<Home/>} exact/>
                 <Route path="/posts/search" element={<Home/>} exact/>
                 <Route path="/posts/:id" element={<PostDetails/>}/>
@@ -18,7 +18,7 @@ export const useRoutes = (isAuth) => {
 
     return (
         <Routes>
-            <Route path={process.env.REACT_APP_BASE_URL} element={<Navigate to="/posts" replace/>}/>
+            <Route path="/" element={<Navigate to="/posts" replace/>}/>
             <Route path="/posts" element={<Home/>} exact/>
             <Route path="/posts/search" element={<Home/>} exact/>
             <Route path="/posts/:id" element={<PostDetails/>}/>
