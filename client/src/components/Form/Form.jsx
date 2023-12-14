@@ -35,7 +35,7 @@ const Form = () => {
             dispatch(updatePost({currentId: currentId, postData: {...postData, tags, name: user.name}, enqueueSnackbar}))
             clear()
         } else {
-            console.log({postData});
+            // console.log({postData});
             dispatch(createPost( { postData: {...postData, tags, name: user.name}}, enqueueSnackbar))
             navigate("/")
             clear()
